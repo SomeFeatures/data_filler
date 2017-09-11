@@ -14,9 +14,9 @@ const RULES = [
 {
   type:  'Сarousel',
   re: {
-    login: "^https:\/\/accounts\.google\.com\/signin\/.+\/identifier",
+    login: "^https:\/\/accounts\.google\.com\/(signin\/.+\/identifier|ServiceLogin)",
     pwd: "^https:\/\/accounts\.google\.com\/signin\/.+\/pwd",
-    provider: "^https:\/\/accounts\.google\.com\/signin\/"
+    provider: "^https:\/\/accounts\.google\.com\/(signin|ServiceLogin)\/"
   },
   selectors: {
     login: '#identifierId',
