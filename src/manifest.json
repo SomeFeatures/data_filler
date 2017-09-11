@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "data filler",
+  "version": "0.0.1",
+  "description": "data filler",
+  "background" : {
+    "scripts": [ "bg/bg.js" ]
+  },
+  "content_scripts": [{
+        "run_at": "document_end",
+        "all_frames": false,
+        "matches": ["https://*/*"],
+        "js": [ "content/pwd_filler.js", "content/content.js" ]
+  }],
+  "browser_action": {
+  },
+  "permissions": [ "tabs", "http://*/*", "https://*/*", "storage" ]
+}
